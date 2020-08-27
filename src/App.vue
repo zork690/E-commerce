@@ -3,7 +3,7 @@
     <!--<img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <Encabezado />
-    <PantallaDos />
+    <PantallaTres />
   </div>
 </template>
 
@@ -11,14 +11,16 @@
 //import HelloWorld from './components/HelloWorld.vue'
 //import PantallaUno from './components/PantallaUno.vue'
 import Encabezado from './components/Encabezado.vue'
-import PantallaDos from './components/PantallaDos.vue'
+//import PantallaDos from './components/PantallaDos.vue'
+import PantallaTres from './components/PantallaTres.vue'
 
 export default {
   name: 'App',
   components: {
     //PantallaUno
     Encabezado,
-    PantallaDos
+    PantallaTres
+    //PantallaDos
     //HelloWorld
   }
 }
