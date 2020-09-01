@@ -30,7 +30,7 @@
         <button class="btns" @click="inc">+</button>
         <span id="conteoSpan">{{cantidadArticulo}}</span>
         <button class="btns" @click="dec">-</button>
-        <button class="btn">Agregar Al carrito</button>
+        <router-link :to="{name: 'pantallaTres'}" class="btn">Agregar Al carrito</router-link>
       </div>
       <div id="coloresImagenDiv">
         <span>Colores:</span>

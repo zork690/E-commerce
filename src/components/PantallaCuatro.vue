@@ -1,6 +1,6 @@
 <template>
   <div id="divPrincipal">
-    <div id="encabezadoDosDiv">
+    <!--<div id="encabezadoDosDiv">
       <div id="iconosEncabezadosUno">
         <fa-icon class="iconoEncabezado" :icon="['fas', 'search']" size="2x" />
         <fa-icon class="iconoEncabezado" :icon="['fas', 'bars']" size="2x" />
@@ -89,7 +89,7 @@
         </b-nav-item-dropdown>
         <b-nav-item>Ir a tienda CDMX</b-nav-item>
       </b-nav>
-    </div>
+    </div>-->
 
     <div id="sliderDiv">
       <b-carousel style="text-shadow: 0px 0px 2px #000" fade indicators :interval="2000">
@@ -120,6 +120,7 @@
 
     <div id="categoriasDiv">
       <h3 id="categoriaH">Conoce por categorias</h3>
+      <router-link :to="{name: 'pantallaCinco'}">
       <div
         class="categoriasHijoDiv"
         v-for="(imagenCategorias, indexImagenCategorias) in imagenesCategorias"
@@ -128,9 +129,10 @@
         <img :src="imagenCategorias.source" />
         <span>{{imagenCategorias.categoria}}</span>
       </div>
+      </router-link>
     </div>
 
-    <div id="piePaginaDiv">
+    <!--<div id="piePaginaDiv">
       <div id="piePaginaLeftDiv">
         <p>
           <span class="iconoresumenCompraUno">
@@ -169,7 +171,7 @@
       <h4
         id="derechosH"
       >&copy; 2019 Todos los derechos reservados | Sitio diseñado y desarrollado por by Elements</h4>
-    </div>
+    </div>-->
   </div>
 </template>
 <script>

@@ -1,6 +1,6 @@
 <template>
   <div id="principalDiv">
-    <div id="encabezadoDosDiv">
+    <!--<div id="encabezadoDosDiv">
       <div id="iconosEncabezadosUno">
         <fa-icon class="iconoEncabezado" :icon="['fas', 'search']" size="2x" />
         <fa-icon class="iconoEncabezado" :icon="['fas', 'bars']" size="2x" />
@@ -88,7 +88,7 @@
         </b-nav-item-dropdown>
         <b-nav-item>Ir a tienda CDMX</b-nav-item>
       </b-nav>
-    </div>
+    </div>-->
     <div id="categoriasImagenDiv">
       <div
         class="categoriasImagenDivHijo"
@@ -141,7 +141,7 @@
         </div>
       </div>
     </div>
-    <div id="piePaginaDiv">
+   <!-- <div id="piePaginaDiv">
       <div id="piePaginaLeftDiv">
         <p>
           <span class="iconoresumenCompraUno">
@@ -180,7 +180,7 @@
       <h4
         id="derechosH"
       >&copy; 2019 Todos los derechos reservados | Sitio diseñado y desarrollado por by Elements</h4>
-    </div>
+    </div>-->
   </div>
 </template>
 <script>
@@ -353,10 +353,10 @@ export default {
 #categoriasDosDiv {
   border-top: 1px solid red;
 }
-#categoriasImagenDiv {
+#categoriasImagenDiv{
   border-top: 1px solid red;
 }
-.categoriasImagenDivHijo {
+.categoriasImagenDivHijo{
   float: left;
   border: 1px solid orange;
   width: 100px;
@@ -364,25 +364,25 @@ export default {
   margin: 3px;
   text-align: center;
 }
-.categoriaSpan {
+.categoriaSpan{
   border: 0px solid black;
   display: block;
   margin-top: 5px;
 }
-.categoriasImagenImg {
+.categoriasImagenImg{
   width: 100%;
   height: 69%;
   border: 0px solid red;
 }
-#plusIcono {
+#plusIcono{
   margin-top: 15px;
 }
-#catalogoOPcionesDivP {
+#catalogoOPcionesDivP{
   clear: left;
   border: 1px solid orangered;
   height: auto;
 }
-#catalogoOpcionesDivUno {
+#catalogoOpcionesDivUno{
   border: 0px solid black;
   float: left;
   width: 20%;

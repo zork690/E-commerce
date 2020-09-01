@@ -1,6 +1,6 @@
 <template>
   <div id="divPrincipal">
-    <div id="divUno">
+    <!--<div id="divUno">
       <div id="cuadrito">
         <b-dropdown id="dropDown" class="m-2">
           <template v-slot:button-content>
@@ -110,7 +110,7 @@
         </button>
         <input id="inputBuscar" type="search" class="input-sm form-control" placeholder="Búsqueda" />
       </div>
-    </div>
+    </div>-->
     <div id="divCuatro">
       <b-carousel id="carousel-fade" :interval="2000" fade indicators controls>
         <b-carousel-slide>
@@ -167,10 +167,13 @@
     </div>
     <div id="divSeis">
       <div class="imagenCatalogoDiv">
+        <router-link :to="{name: 'pantallaDos'}">
         <img
           class="imagenCatalogo"
           src="https://i.pinimg.com/originals/72/1d/9e/721d9e8de8f32fe7bb15652c31660ed5.jpg"
+
         />
+        </router-link>
         <span
           class="imagenCatalogoTexto"
         >asksalkdsalk saksaksak saklsalksalk saysayusayu salksalksa asdsa sadd asdasfdsafsafsf retertr uiyuiyuiiu qwewqsdsd</span>
@@ -392,6 +395,7 @@ export default {
 .imagenCatalogo {
   width: 100%;
   height: 300px;
+  cursor: pointer;
 }
 #dropDown {
   float: left;
