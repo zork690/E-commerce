@@ -105,7 +105,7 @@
     </div>
 
     <div id="novedadesDiv">
-      <h3 id="novedadesH">NOVEDADES</h3>
+      <h3 id="novedadesH">Novedades</h3>
       <img
         class="imagenNovedades"
         v-for="(imagenNovedades, indexImagenNovedades) in imagenesNovedades"
@@ -303,6 +303,8 @@ export default {
   width: 100%;
 }
 #novedadesDiv {
+  margin-top: 20px;
+  margin-bottom: 25px;
   border: 0px solid brown;
 }
 #novedadesH {
@@ -324,6 +326,7 @@ export default {
   height: 100%;
 }
 #categoriasDiv {
+  margin-top: 20px;
   border: 0px solid orchid;
 }
 #categoriaH {

@@ -1,4 +1,3 @@
-import PantallaUno from '@/components/PantallaUno.vue'
 import PantallaDos from '@/components/PantallaDos.vue'
 import PantallaTres from '@/components/PantallaTres.vue'
 import PantallaCuatro from '@/components/PantallaCuatro.vue'
@@ -8,8 +7,8 @@ import PantallaCinco from '@/components/PantallaCinco.vue'
 const routes = [
     {
         path: "/",
-        name: "pantallaUno",
-        component: PantallaUno
+        name: "pantallaCuatro",
+        component: PantallaCuatro
     },
     {
         path: "/pantallaDos",
@@ -20,11 +19,6 @@ const routes = [
         path: "/pantallaTres",
         name: "pantallaTres",
         component: PantallaTres
-    },
-    {
-        path: "/pantallaCuatro",
-        name: "pantallaCuatro",
-        component: PantallaCuatro
     },
     {
         path: "/pantallaCinco",

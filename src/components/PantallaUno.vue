@@ -180,8 +180,8 @@
       </div>
       <div class="imagenCatalogoDiv">
         <img
-          class="imagenCatalogo"
-          src="https://tic-toc.com.mx/wp-content/uploads/2018/04/pulsera-kandahar-joyeria-boho-bohemia-mexico-1.jpg"
+          class="imagenCatalogo" 
+          src="../assets/imagenes/7.jpg"
         />
         <span
           class="imagenCatalogoTexto"

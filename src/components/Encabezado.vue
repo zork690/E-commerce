@@ -1,28 +1,31 @@
 <template>
   <div id="divPrincipal">
     <div id="divUno">
-      <div id="cuadrito">
-        <b-dropdown id="dropDown" class="m-2">
-          <template v-slot:button-content>
-            <b-icon-menu-up />
-          </template>
-          <b-dropdown-item href="#">Action</b-dropdown-item>
-          <b-dropdown-item href="#">Another action</b-dropdown-item>
-          <b-dropdown-item href="#">Something else here</b-dropdown-item>
-        </b-dropdown>
-      </div>
-      <div id="logo">
-        <img id="logoImagen" alt="Steel Of Elements" src="../assets/logo.png" />
-      </div>
-      <div id="miCuentaDiv">
+      <div id="divUnoUno">
         <span class="iconoSpan">
-          <fa-icon :icon="['fas', 'shopping-cart']" />Carrito
+          <fa-icon class="iconoIcono" :icon="['fas', 'search']" size="2x" />
+          <span class="iconoIconoTexto">Buscar</span>
         </span>
         <span class="iconoSpan">
-          <fa-icon :icon="['fas', 'heart']" />Favoritos
+          <fa-icon class="iconoIcono" :icon="['fas', 'bars']" size="2x" />
+          <span class="iconoIconoTexto">Menu</span>
+        </span>
+      </div>
+      <div id="divUnoDos">
+        <img id="logoImagen" alt="Steel Of Elements" src="../assets/logoDos.png" />
+      </div>
+      <div id="divUnoTres">
+        <span class="iconoSpan">
+          <fa-icon class="iconoIcono" :icon="['fas', 'shopping-cart']" size="2x" />
+          <span class="iconoIconoTexto">Carrito</span>
         </span>
         <span class="iconoSpan">
-          <fa-icon :icon="['fas', 'user']" />Mi Cuenta
+          <fa-icon class="iconoIcono" :icon="['fas', 'heart']" size="2x" />
+          <span class="iconoIconoTexto">Favoritos</span>
+        </span>
+        <span class="iconoSpan">
+          <fa-icon class="iconoIcono" :icon="['fas', 'user']" size="2x" />
+          <span class="iconoIconoTexto">Mi Cuenta</span>
         </span>
       </div>
     </div>
@@ -103,14 +106,6 @@
         <b-nav-item>Ir a tienda CDMX</b-nav-item>
       </b-nav>
     </div>
-    <div id="divTres">
-      <div id="divTresH">
-        <button id="botonBuscar" type="submit" class="btn btn-primary btn-sm">
-          <b-icon-search id="buscarIcono" />
-        </button>
-        <input id="inputBuscar" type="search" class="input-sm form-control" placeholder="Búsqueda" />
-      </div>
-    </div>
   </div>
 </template>
 <script>
@@ -120,81 +115,50 @@ export default {
 </script>
 <style scoped>
 #divUno {
-  background-color: none;
-  border-top: 8px solid rgb(247, 175, 20);
+  border-top: 10px solid rgb(247, 175, 20);
+  height: auto;
+}
+#divUnoUno {
+  border: 0px solid red;
+  width: 33.33%;
+  float: left;
+  padding: 12px;
+}
+#divUnoDos {
+  border: 0px solid red;
+  width: 33.33%;
+  float: left;
+}
+#logoImagen {
+  border: 0px solid red;
+  width: 100%;
+  margin-bottom: 15px;
+}
+#divUnoTres {
+  border: 0px solid red;
+  width: 33.33%;
+  float: left;
+  padding: 12px;
+}
+.iconoSpan {
+  border: 0px solid red;
+  display: inline-block;
+  width: 33%;
+}
+.iconoIcono {
+  border: 0px solid blue;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.iconoIconoTexto{
+  border: 0px solid blue;
+  display: block;
+  text-align: center;
 }
 #divDos {
   clear: left;
-  background-color: none;
-  border: none;
+  border-top: 2px solid gray;
   height: 100px;
-}
-#divTres {
-  clear: left;
-  text-align: center;
-  background-color: none;
-  border: none;
-  margin-bottom: 30px;
-}
-#divTresH {
-  display: inline-block;
-}
-#cuadrito {
-  background-color: none;
-  float: left;
-  height: 80px;
-  width: 33%;
-}
-#logo {
-  float: left;
-  background-color: none;
-  height: 80px;
-  width: 33%;
-}
-#logoImagen {
-  /*width: 100%;*/
-}
-#miCuentaDiv {
-  float: left;
-  background-color: none;
-  height: 80px;
-  width: 34%;
-}
-#miCuenta {
-  background-color: #ac5e3f;
-  width: 34%;
-  display: inline-block;
-}
-#favoritos {
-  background-color: #05afda;
-  width: 33%;
-  display: inline-block;
-}
-#carrito {
-  background-color: #dda01b;
-  width: 33%;
-  display: inline-block;
-}
-.menu {
-  display: inline-block;
-  border: 1px dotted red;
-  width: 70px;
-}
-#inputBuscar {
-  width: 900px;
-  display: inline-block;
-}
-#botonBuscar {
-  background-color: none;
-}
-#buscarIcono {
-  height: 25px;
-}
-#dropDown {
-  float: left;
-}
-.iconoSpan {
-  float: right;
-  padding-left: 20px;
 }
 </style>

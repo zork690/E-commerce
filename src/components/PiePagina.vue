@@ -58,8 +58,9 @@ export default {
 <style scoped>
 #piePaginaDiv {
   clear: left;
-  border-top: 1px solid red;
-  border-bottom: 10px solid orange;
+  border-top: 2px solid gray;
+  border-bottom: 15px solid orange;
+  margin-top: 8px;
 }
 #piePaginaLeftDiv {
   border: 0px solid blue;
@@ -84,6 +85,7 @@ export default {
 #derechosH {
   clear: left;
   text-align: center;
+  font-size: 15px;
 }
 .iconoPiePaginaRight {
   margin-left: 20px;

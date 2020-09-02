@@ -16,7 +16,7 @@
           :key="indexArticuloCarrito"
         >
           <td class="imagenDescripcionCarrito">
-            <img :src="articuloCarrito.imagen" />
+            <img :src="articuloCarrito.imagen" /> 
             <span class="descripcionArticulo">{{articuloCarrito.descripcion}}</span>
             <a class="eliminar">Eliminar</a>
           </td>
@@ -34,7 +34,7 @@
     </div>
     <div id="resumenCompraP">
       <div id="resumenCompraUno">
-        <p>
+        <p> 
           <span class="iconoresumenCompraUno">
             <fa-icon :icon="['fas', 'lock']" />
           </span>Compra Segura
@@ -93,7 +93,7 @@ export default {
       articulosCarrito: [
         {
           imagen:
-            "https://distrollermx.vteximg.com.br/arquivos/ids/159126-750-750/7506176967411_02.jpg?v=636525831016570000",
+            "../assets/imagenes/7.jpg",
           descripcion: "Pulsera Estrella Circulo Resina",
           piezas: 2,
           precio: 200,
