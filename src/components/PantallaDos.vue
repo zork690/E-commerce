@@ -47,66 +47,70 @@
           <span class="circulo" style="background-color: yellow;"></span>
         </div>
         <div class="coloresImagenDivHijo">
-        <span class="textoColor">Rose</span>
-        <span class="circulo" style="background-color: pink;"></span>
+          <span class="textoColor">Rose</span>
+          <span class="circulo" style="background-color: pink;"></span>
         </div>
         <div class="coloresImagenDivHijo">
-        <span class="textoColor">Steel</span>
-        <span class="circulo" style="background-color: gray;"></span>
+          <span class="textoColor">Steel</span>
+          <span class="circulo" style="background-color: gray;"></span>
         </div>
       </div>
     </div>
 
     <div id="descripcionArticuloDivP">
       <div id="caracteristicasArticuloDiv">
-        <h3>Características del Artículo</h3>
-        <ul>
-          <li>
-            <span>Material:</span>
-            <span>Acero</span>
-          </li>
-          <li>
-            <span>Tipo:</span>
-            <span>Abierto</span>
-          </li>
-          <li>
-            <span>Figura:</span>
-            <span>Si</span>
-          </li>
-          <li>
-            <span>Medida:</span>
-            <span>5cm</span>
-          </li>
-          <li>
-            <span>Color:</span>
-            <span>Gold</span>
-          </li>
-          <li>
-            <span>Categoría:</span>Brazzalette
-            <span></span>
-          </li>
-          <li>
-            <span>Piedra:</span>
-            <span>Si</span>
-          </li>
-          <li>
-            <span>Tamaño:</span>
-            <span>Medium</span>
-          </li>
-          <li>
-            <span>Genero:</span>
-            <span>Unisex</span>
-          </li>
+        <h3 id="caracteristicasH">Características del Artículo</h3>
+        <ul id="listaCaracteristicas">
+          <div class="listaCaracteristicasColumna">
+            <li>
+              <span>Material:</span>
+              <span>Acero</span>
+            </li>
+            <li>
+              <span>Tipo:</span>
+              <span>Abierto</span>
+            </li>
+            <li>
+              <span>Figura:</span>
+              <span>Si</span>
+            </li>
+            <li>
+              <span>Medida:</span>
+              <span>5cm</span>
+            </li>
+            <li>
+              <span>Color:</span>
+              <span>Gold</span>
+            </li>
+          </div>
+          <div class="listaCaracteristicasColumna">
+            <li>
+              <span>Categoría:</span>Brazzalette
+              <span></span>
+            </li>
+            <li>
+              <span>Piedra:</span>
+              <span>Si</span>
+            </li>
+            <li>
+              <span>Tamaño:</span>
+              <span>Medium</span>
+            </li>
+            <li>
+              <span>Genero:</span>
+              <span>Unisex</span>
+            </li>
+          </div>
         </ul>
       </div>
       <div id="descripcionArticuloDiv">
-        <h3>Descripción del artículo</h3>
+        <h3 id="descripcionArticuloH">Descripción del artículo</h3>
         <span>Brazalete Elegante tipo abierto con detalles de figuras de bloque.</span>
       </div>
     </div>
 
     <div id="masArticulosDiv">
-      <h3>Artículos que pueden interesarte:</h3>
+      <h3 id="masArticulosH3">Artículos que pueden interesarte:</h3>
       <div class="wrapper">
         <ul class="carousel" data-target="carousel">
           <li class="card" data-target="card">
@@ -181,11 +185,22 @@
       <h3>Reseñas:</h3>
       <ul class="resenaUl">
         <li class="resenaLi">
-          <fa-icon class="resenaImagen" :icon="['fas', 'user']" />
-          <span>Benjamin:</span>
-          <span>Excelente producto</span>
-          <br />
-          <b-form-rating v-model="valueResena" variant="warning" readonly></b-form-rating>
+          <div class="resenaDiv">
+            <img
+              class="imagenResena"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png"
+            />
+            <div class="ratingResenaDiv">
+            <span>Benjamin: </span>
+            <span>Excelente producto</span>
+            <b-form-rating
+              v-model="valueResena"
+              style="border: none; width: 10px; padding: 0px;"
+              variant="warning"
+              readonly
+            ></b-form-rating>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -363,11 +378,11 @@ export default {
   width: 5%;
   margin: 20px 0px;
 }
-.coloresImagenDivHijo{
+.coloresImagenDivHijo {
   border: 0px solid red;
   clear: both;
 }
-.textoColor{
+.textoColor {
   border: 0px solid black;
   float: left;
 }
@@ -379,7 +394,7 @@ export default {
   border-radius: 50%;
 }
 #descripcionArticuloDivP {
- border-top: 2px solid rgb(247, 175, 20);
+  border-top: 2px solid rgb(247, 175, 20);
   clear: left;
   padding-top: 20px;
   padding-left: 20px;
@@ -388,19 +403,51 @@ export default {
   border: 0px solid purple;
   width: 50%;
   float: left;
+  height: 180px;
+}
+#caracteristicasH {
+}
+#listaCaracteristicas {
+  list-style: none;
+}
+.listaCaracteristicasColumna {
+  float: left;
+  border: 0px solid red;
+  margin-right: 50px;
 }
 #descripcionArticuloDiv {
   border: 0px solid purple;
   width: 50%;
   float: left;
 }
+#descripcionArticuloH {
+}
 #masArticulosDiv {
-  border-top: 1px solid red;
+  border-top: 2px solid rgb(247, 175, 20);
   margin-bottom: 15px;
   clear: left;
+  padding-top: 13px;
+  padding-left: 20px;
+}
+#masArticulosH3 {
+  margin-bottom: 20px;
 }
 #resenasDiv {
-  border-top: 1px solid red;
+  border-top: 0px solid red;
+  margin-top: 35px;
+  padding-left: 20px;
+}
+.resenaDiv{
+  border: 0px solid green;
+}
+.imagenResena{
+  width: 50px;
+  height: 50px;
+  float: left;
+}
+.ratingResenaDiv{
+  border: 0px solid pink;
+  display: inline-block;
 }
 .wrapper {
   height: 200px;
