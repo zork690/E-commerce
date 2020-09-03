@@ -120,7 +120,9 @@
           :key="indexImagenCatalogo"
         >
           <div class="imagenDiv">
+            <router-link :to="{name: 'pantallaDos'}">
             <img class="imagenCatalogo" :src="imagenCatalogo.source" />
+            </router-link>
           </div>
           <p class="descripcionArticulo">{{imagenCatalogo.descripcion}}</p>
           <div class="precioCantidadArticuloDiv">
@@ -354,11 +356,11 @@ export default {
   border-top: 1px solid red;
 }
 #categoriasImagenDiv{
-  border-top: 1px solid red;
+  border-top: 1px solid rgb(247, 175, 20);
 }
 .categoriasImagenDivHijo{
   float: left;
-  border: 1px solid orange;
+  border: 1px solid rgb(247, 175, 20);
   width: 100px;
   height: 100px;
   margin: 3px;
@@ -379,18 +381,19 @@ export default {
 }
 #catalogoOPcionesDivP{
   clear: left;
-  border: 1px solid orangered;
+  border: 0px solid rgb(247, 175, 20);
   height: auto;
 }
 #catalogoOpcionesDivUno{
-  border: 0px solid black;
+  border-top: 1px solid rgb(247, 175, 20);
   float: left;
   width: 20%;
   text-align: center;
   padding-top: 20px;
 }
 #catalogoOpcionesDivDos {
-  border-left: 1px solid orangered;
+  border-left: 1px solid rgb(247, 175, 20);
+  border-top: 1px solid rgb(247, 175, 20);
   float: left;
   width: 80%;
 }

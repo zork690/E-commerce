@@ -127,12 +127,14 @@ export default {
 #divUnoDos {
   border: 0px solid red;
   width: 33.33%;
+  height: 85px;
   float: left;
+  margin-bottom: 15px;
 }
 #logoImagen {
   border: 0px solid red;
   width: 100%;
-  margin-bottom: 15px;
+  height: 100%;
 }
 #divUnoTres {
   border: 0px solid red;
