@@ -10,7 +10,7 @@
     >
       <img class="normal" ref="normal" :src="imgNormal" />
       <img class="zoom" ref="zoom" :src="imgZoom || imgNormal" />
-    </div>Pase el mouse sobre la foto para hacer zoom
+    </div><span id="leyendaZoom">Pase el mouse sobre la foto para hacer zoom</span>
   </div>
 </template>
 <script>
@@ -134,5 +134,11 @@ export default {
 }
 .zoom-on-hover.zoomed .normal {
   opacity: 0;
+}
+#leyendaZoom{
+  border: 0px solid red;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
 </style>

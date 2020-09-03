@@ -11,38 +11,49 @@
         <ImagenZoom img-normal="https://conceptodefinicion.de/wp-content/uploads/2017/12/Joya2.jpg"></ImagenZoom>
       </div>
       <div id="calificacionImagenDiv">
-        <h4 id="tituloImagen">Título de la imagen</h4>
-        <b-form-rating id="estrellas" variant="warning" class="mb-2"></b-form-rating>
-        <span id="calificarSpan">Calificar</span>
+        <h4 id="tituloImagen">Pulsera estrella circulo resina</h4>
+        <div id="calificacionDiv">
+          <span id="estrellas">
+            <b-form-rating style="border: none;" variant="warning" class="mb-0"></b-form-rating>
+          </span>
+          <span id="calificarSpan">Calificar</span>
+        </div>
         <p id="puntosRecompensaP">Puntos de recompensa:10</p>
-        <p>
-          Precio:
-          <span id="precioSpan">$100</span>
-        </p>
-        <p>
-          Descuento:
-          <span class="precioSpan">50%</span>
-        </p>
-        <p>
-          Precio con Descuento:
-          <span class="precioSpan">$50</span>
-        </p>
-        <button class="btns" @click="inc">+</button>
+        <div id="precioDescuentoDiv">
+          <span class="precioDescuentoSpan">
+            Precio:
+            <span id="precioSpan">$100</span>
+          </span>
+          <span class="precioDescuentoSpan">
+            Descuento:
+            <span class="precioSpan">50%</span>
+          </span>
+          <span class="precioDescuentoSpan">
+            Precio con Descuento:
+            <span class="precioSpan">$50</span>
+          </span>
+        </div>
+        <span class="botonesIncrementoDecremento" @click="inc">+</span>
         <span id="conteoSpan">{{cantidadArticulo}}</span>
-        <button class="btns" @click="dec">-</button>
-        <router-link :to="{name: 'pantallaTres'}" class="btn">Agregar Al carrito</router-link>
+        <span class="botonesIncrementoDecremento" @click="dec">-</span>
+        <router-link :to="{name: 'pantallaTres'}">
+          <span class="agregarCarritoBoton">agregar al carrito</span>
+        </router-link>
       </div>
       <div id="coloresImagenDiv">
-        <span>Colores:</span>
-        <br />
-        <span>Gold</span>
-        <span class="circulo" style="background-color: yellow;"></span>
-        <br />
-        <span>Rose</span>
+        <p>Colores:</p>
+        <div class="coloresImagenDivHijo">
+          <span class="textoColor">Gold</span>
+          <span class="circulo" style="background-color: yellow;"></span>
+        </div>
+        <div class="coloresImagenDivHijo">
+        <span class="textoColor">Rose</span>
         <span class="circulo" style="background-color: pink;"></span>
-        <br />
-        <span>Steel</span>
+        </div>
+        <div class="coloresImagenDivHijo">
+        <span class="textoColor">Steel</span>
         <span class="circulo" style="background-color: gray;"></span>
+        </div>
       </div>
     </div>
 
@@ -244,17 +255,15 @@ export default {
 </script>
 <style scoped>
 #principalDiv {
-  border-top: 5px solid red;
+  border-top: 5px solid rgb(247, 175, 20);
   margin: 0px;
 }
 #articuloDetalleDiv {
   border: 0px solid orange;
 }
-#articuloDetalleDiv > div {
-  float: left;
-}
 #imagenChicaDiv {
-  border: 2px solid red;
+  float: left;
+  border: 2px solid rgb(247, 175, 20);
   width: 10%;
   height: 200px;
   margin: 20px 15px;
@@ -263,30 +272,50 @@ export default {
   width: 100%;
 }
 #imagenGrandeDiv {
+  float: left;
   border: 0px solid black;
   width: 35%;
   margin: 20px 0px;
+  margin-right: 40px;
 }
 .imagenGrande {
   width: 100%;
 }
 #calificacionImagenDiv {
+  float: left;
   border: 0px solid yellowgreen;
   width: 30%;
   margin: 20px 0px;
 }
+#tituloImagen {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+#calificacionDiv {
+  border: 0px solid red;
+}
 #estrellas {
-  width: 80%;
-  float: left;
+  border: 0px solid yellow;
+  display: inline-block;
 }
 #calificarSpan {
   color: red;
   font-size: 12px;
   border: 0px solid brown;
-  float: right;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration-line: underline;
 }
 #puntosRecompensaP {
   clear: both;
+}
+#precioDescuentoDiv {
+  border: 0px solid red;
+  margin-bottom: 8px;
+}
+.precioDescuentoSpan {
+  display: block;
 }
 #precioSpan {
   font-weight: bolder;
@@ -296,26 +325,64 @@ export default {
 .precioSpan {
   font-weight: bolder;
 }
+.botonesIncrementoDecremento {
+  font-weight: bolder;
+  color: orange;
+  font-size: 2em;
+  cursor: pointer;
+  border: 0px solid black;
+}
 #conteoSpan {
-  border: 0px solid pink;
+  border: 2px solid orange;
   display: inline-block;
-  width: 20px;
+  width: 30px;
   height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.agregarCarritoBoton {
+  border: 1px solid orange;
+  margin-left: 4px;
+  cursor: pointer;
+  color: black;
+  background-color: orange;
+  display: inline-block;
+  width: 130px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
 }
 #coloresImagenDiv {
+  float: left;
   border: 0px solid red;
-  width: 20%;
+  width: 5%;
   margin: 20px 0px;
 }
+.coloresImagenDivHijo{
+  border: 0px solid red;
+  clear: both;
+}
+.textoColor{
+  border: 0px solid black;
+  float: left;
+}
 .circulo {
-  display: inline-block;
+  float: right;
   width: 10px;
   height: 10px;
+  margin-top: 8px;
   border-radius: 50%;
 }
 #descripcionArticuloDivP {
-  border: 1px solid red;
+ border-top: 2px solid rgb(247, 175, 20);
   clear: left;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 #caracteristicasArticuloDiv {
   border: 0px solid purple;
