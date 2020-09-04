@@ -182,7 +182,7 @@ export default {
       imagenesSlider: [
         {
           source:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRRj21HrkDwgKe_rRxhtmSfh5hmvO75aWTyyQ&usqp=CAU",
+            "https://i.ytimg.com/vi/LAhxWjErMpY/maxresdefault.jpg",
           caption: "",
         },
         {
@@ -192,12 +192,12 @@ export default {
         },
         {
           source:
-            "https://swarovskimexico.vteximg.com.br/arquivos/ids/158812-607-607/5464120_gi2_1200.jpg?v=636846390239030000",
+            "https://alejandravaldivieso.com/wp-content/uploads/2019/12/Aretes-filigrana-ARCANGEL-2-filigrana-en-plata-con-ba%C3%B1o-de-oro.jpg",
           caption: "",
         },
         {
           source:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSi3TYgFa6xB29DCw46dQXkVZ0rg6Df_POc4w&usqp=CAU",
+            "https://http2.mlstatic.com/aretes-de-acero-inoxidable-cadena-y-triangulo-D_NQ_NP_812404-MLM43201791607_082020-F.jpg",
           caption: "",
         },
       ],
@@ -232,7 +232,7 @@ export default {
         },
       ],
       imagenGrande:
-        "https://previews.123rf.com/images/photostella/photostella1710/photostella171000002/87779014-pulseras-de-piedras-preciosas-de-%C3%A1gata-con-espoleta-dorada.jpg",
+        "https://cdn.shopify.com/s/files/1/0237/7435/products/image_d19efd49-71a2-4564-a132-ff0bc8a5fa05_1024x1024.jpg?v=1585987839",
       imagenesCategorias: [
         {
           source:
@@ -267,6 +267,8 @@ export default {
 <style scoped>
 #divPrincipal {
   border: 0px solid red;
+  width: 850px;
+  margin: 0 auto;
 }
 #encabezadoDosDiv {
   border: 0px solid green;
@@ -296,11 +298,11 @@ export default {
 #sliderDiv {
   border: 0px solid orange;
   width: 100%;
-  height: auto;
+  
 }
 .imagenSlider {
-  height: 300px;
   width: 100%;
+  height: 300px;
 }
 #novedadesDiv {
   margin-top: 20px;

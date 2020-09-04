@@ -5,7 +5,7 @@
       <b-button id="botonPagarUno">Pagar</b-button>
       <table id="tablaCarrito">
         <tr>
-          <th
+          <th class="thTablaCarrito"
             v-for="(encabezadoTablaCarrito, indexEncabezadoTablaCarrito) in encabezadosTablaCarrito"
             :key="indexEncabezadoTablaCarrito"
           >{{encabezadoTablaCarrito}}</th>
@@ -16,25 +16,27 @@
           :key="indexArticuloCarrito"
         >
           <td class="imagenDescripcionCarrito">
-            <img :src="articuloCarrito.imagen" /> 
+            <img class="imagenDescripcionCarritoImg" :src="articuloCarrito.imagen" />
+          <div class="descripcionArticuloCarrito">
             <span class="descripcionArticulo">{{articuloCarrito.descripcion}}</span>
             <a class="eliminar">Eliminar</a>
+          </div>
           </td>
-          <td>
+          <td class="botonesCantidadCarrito">
             <span class="botonPiezas" @click="decrementarPiezas()">-</span>
             <span class="piezasS">{{articuloCarrito.piezas}}</span>
             <span class="botonPiezas" @click="incrementarPiezas()">+</span>
           </td>
-          <td>{{articuloCarrito.precio}}</td>
-          <td>{{articuloCarrito.porcentaje}}</td>
-          <td>{{(articuloCarrito.precio)*("."+articuloCarrito.porcentaje)}}</td>
-          <td>{{articuloCarrito.precio - ((articuloCarrito.precio)*("."+articuloCarrito.porcentaje))}}</td>
+          <td class="precioArticuloCarrito">{{articuloCarrito.precio}}</td>
+          <td class="porcentajeArticulo">{{articuloCarrito.porcentaje}}</td>
+          <td class="descuentoCarrito">{{(articuloCarrito.precio)*("."+articuloCarrito.porcentaje)}}</td>
+          <td class="subtotalCarrito">{{articuloCarrito.precio - ((articuloCarrito.precio)*("."+articuloCarrito.porcentaje))}}</td>
         </tr>
       </table>
     </div>
     <div id="resumenCompraP">
       <div id="resumenCompraUno">
-        <p> 
+        <p>
           <span class="iconoresumenCompraUno">
             <fa-icon :icon="['fas', 'lock']" />
           </span>Compra Segura
@@ -92,8 +94,7 @@ export default {
       ],
       articulosCarrito: [
         {
-          imagen:
-            "../assets/imagenes/7.jpg",
+          imagen: "https://distrollermx.vteximg.com.br/arquivos/ids/159126-750-750/7506176967411_02.jpg?v=636525831016570000",
           descripcion: "Pulsera Estrella Circulo Resina",
           piezas: 2,
           precio: 200,
@@ -160,29 +161,66 @@ export default {
 }
 #tablaCarrito {
   width: 100%;
+}
+.thTablaCarrito{
   text-align: center;
 }
 .trTablaCarrito {
   border-top: 2px solid rgb(190, 181, 181);
+  height: 110px;
+  
 }
 .imagenDescripcionCarrito {
-  width: 400px;
+  height: 100px;
 }
-.imagenDescripcionCarrito > img {
-  width: 50%;
-  margin: 10px;
+.botonesCantidadCarrito{
+  width: 10%;
+  border: 0px solid black;
+  text-align: center;
+}
+.precioArticuloCarrito{
+  width: 10%;
+  border: 0px solid black;
+  text-align: center;
+}
+.porcentajeArticulo{
+  width: 10%;
+  border: 0px solid black;
+  text-align: center;
+}
+.descuentoCarrito{
+  width: 10%;
+  border: 0px solid black;
+  text-align: center;
+}
+.subtotalCarrito{
+  width: 10%;
+  border: 0px solid black;
+  text-align: center;
+}
+.descripcionArticuloCarrito{
+  border: 0px solid red;
+  float: right;
+  width: 80%;
+  padding-top: 10px;
+}
+.imagenDescripcionCarritoImg{
   border: 0px solid black;
   float: left;
+  width: 20%;
+  height: 100%;
 }
 .eliminar {
   color: red;
   font-size: 12px;
   text-decoration-line: underline;
+  font-weight: bold;
 }
 #resumenCompraP {
   border-top: 2px solid rgb(190, 181, 181);
   height: 300px;
   text-align: center;
+  margin-bottom: 25px;
 }
 #resumenCompraUno {
   border: 0px solid green;
@@ -206,19 +244,22 @@ export default {
   margin: 20px;
 }
 #descuentoAplicadoP {
-  color: pink;
+  color: orange;
+  font-weight: bold;
 }
 #botonPagarUno {
   float: right;
-  background-color: pink;
+  background-color: orange;
   width: 200px;
   color: black;
   font-weight: bold;
   border: none;
   margin: 8px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 #pagarButon {
-  background-color: pink;
+  background-color: orange;
   border: none;
   width: 300px;
   color: black;
@@ -240,6 +281,8 @@ export default {
 }
 #tuCarritoH {
   display: inline;
+  font-weight: bold;
+  margin-left: 10px;
 }
 .descripcionArticulo {
   font-weight: bold;
@@ -253,9 +296,11 @@ export default {
   font-size: 30px;
   font-weight: bolder;
 }
-.piezasS{
-  border: 2px solid pink;
+.piezasS {
+  border: 2px solid orange;
   padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .botonPiezas:hover {
   cursor: pointer;

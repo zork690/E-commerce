@@ -1,29 +1,29 @@
-import PantallaDos from '@/components/PantallaDos.vue'
-import PantallaTres from '@/components/PantallaTres.vue'
-import PantallaCuatro from '@/components/PantallaCuatro.vue'
-import PantallaCinco from '@/components/PantallaCinco.vue'
+import DetalleArticulo from '@/components/DetalleArticulo.vue'
+import CarritoCompra from '@/components/CarritoCompra.vue'
+import PantallaInicial from '@/components/PantallaInicial.vue'
+import CatalogoProductos from '@/components/CatalogoProductos.vue'
 
 
 const routes = [
     {
         path: "/",
         name: "pantallaCuatro",
-        component: PantallaCuatro
+        component: PantallaInicial
     },
     {
         path: "/pantallaDos",
         name: "pantallaDos",
-        component: PantallaDos
+        component: DetalleArticulo
     },
     {
         path: "/pantallaTres",
         name: "pantallaTres",
-        component: PantallaTres
+        component: CarritoCompra
     },
     {
         path: "/pantallaCinco",
         name: "pantallaCinco",
-        component: PantallaCinco
+        component: CatalogoProductos
     }
 ];
 
